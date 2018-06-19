@@ -1,0 +1,96 @@
+1)Ans:-
+
+class Circle():
+  def __init__(self,radius):
+    self.radius = radius
+  def  getArea(self):
+    return 3.14*self.radius*self.radius
+  def getCircumference(self):
+    return self.radius*2*3.14
+
+rad=int(input("enter radius: "))
+obj=Circle(rad)
+area=obj.getArea()
+circum=obj.getCircumference()
+print(area)
+print(circum)
+
+
+2)Ans:-
+
+class Student:
+    def __init__(self,name,roll):
+        self.name=name
+        self.roll=roll
+
+    def display_student_info(self):
+        print(self.name)
+        print(self.roll)
+
+student_name=input("enter student name: ")
+student_roll=int(input("enter student roll: "))
+obj=Student(student_name,student_roll)
+obj.display_student_info()
+
+3)Ans:-
+
+class Temprature():
+  def  convertFahrenhiet(self,celsius):
+    return (celsius*(9/5))+32
+  def convertCelsius(self,farenhiet):
+    return (farenhiet-32)*(5/9)
+
+obj=Temprature()
+a=int(input("enter celsius to convert into farenhiet: "))
+b=int(input("enter farenhiet to convert into celsius: "))
+x=obj.convertCelsius(a)
+y=obj.convertFahrenhiet(b)
+print(x)
+print(y)
+
+4)Ans:-
+
+class MovieDetails:
+    def __init__(self,movie_name,artist_name,releasing_year,rating):
+        self.movieName=movie_name
+        self.artistName=artist_name
+        self.releasingYear=releasing_year
+        self.rating=rating
+
+    def display_movie_details(self):
+        print(self.movieName)
+        print(self.artistName)
+        print(self.releasingYear)
+        print(self.rating)
+
+    def update_movie_details(self,name,artist,year,rate):
+        self.movieName = name
+        self.artistName = artist
+        self.releasingYear = year
+        self.rating = rate
+
+obj=MovieDetails("2 states","arjun kapoor , alia bhatt",2014,"****(4 star)")
+obj.display_movie_details()
+obj.update_movie_details("2 states","arjun kapoor",2014,"***(3 star)")
+obj.display_movie_details()
+
+5)Ans:-
+
+class Expenditure:
+    total_salary=0
+    def __init__(self,expenditure,savings):
+        self.expenditure=expenditure
+        self.savings=savings
+
+    def display_expenditure_and_savings(self):
+        print("Expenditure: ",self.expenditure)
+        print("Savings: ",self.savings)
+
+    def display_total_salary(self):
+        print(self.expenditure+self.savings)
+
+expend=int(input("enter expenditure: "))
+sav=int(input("enter savings: "))
+ob=Expenditure(expend,sav)
+ob.display_expenditure_and_savings()
+ob.display_total_salary()
